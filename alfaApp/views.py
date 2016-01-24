@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def defect_list(request):
+    return render(request, 'alfaApp/defect_list.html', {})
