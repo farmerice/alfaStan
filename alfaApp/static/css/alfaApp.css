@@ -1,0 +1,21 @@
+.page-header {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+.content {
+    margin-left: 40px;
+}
+
+.date {
+    float: right;
+    color: #828282;
+}
+
+.defect {
+    margin-bottom: 70px;
+}
+
+.defect p a {
+    font-family: 'Lobster';
+}

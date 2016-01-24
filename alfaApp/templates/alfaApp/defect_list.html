@@ -1,18 +1,15 @@
-<html>
-  <head>
-      <title>Alfa stan defects</title>
-  </head>
-  <div>
-    <h1><a href="/">Alfa stan list of defects</a></h1>
-  </div>
-  {% for defect in defects %}
-    <div>      
-      <h1><a href=""> {{defect.title}} </a></h1>
-      <p>published: {{defect.published_date}}</p>
-      <p>{{defect.author}} </p>
-      <p>{{defect.project}} </p>
-      <p>{{defect.apartment}} </p>
-      <p>{{defect.description}} </p>
-    <div>
-  {% endfor %}
-</html>
+{% extends 'alfaApp/base.html' %}
+  {% block content %}
+        {% for defect in defects %}
+          <div class="defect">
+            <div class="date">
+              <p>published: {{defect.published_date}}</p>
+            </div>
+            <h1><a href="{% url 'defect_detail' pk=defect.pk %}"> {{defect.title}} </a></h1>
+            <p>{{defect.author}} </p>
+            <p>{{defect.project}} </p>
+            <p>{{defect.apartment}} </p>
+            <p><a>{{defect.description}} </a></p>
+          <div>
+        {% endfor %}
+{% endblock %}
