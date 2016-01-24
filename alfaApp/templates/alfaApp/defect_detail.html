@@ -3,9 +3,10 @@
     <div class="defect">
       {% if post.published_date %}
         <div class="date">
-          <p>published: {{defect.published_date}}</p>
+          {{defect.published_date}}
         </div>
       {% endif %}
+      <a class="btn btn-default" href="{% url 'defect_edit' pk=defect.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
       <p>{{defect.author}} </p>
       <p>{{defect.project}} </p>
       <p>{{defect.apartment}} </p>
