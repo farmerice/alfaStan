@@ -3,6 +3,9 @@ from django.utils import timezone
 from .models import Defect
 from .forms import PostForm
 
+def welcome_page(request):
+    return render(request, 'alfaApp/welcome_page.html', {})
+
 def defect_list(request):
     defects = Defect.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'alfaApp/defect_list.html', {'defects':defects})
