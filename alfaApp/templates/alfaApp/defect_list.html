@@ -2,14 +2,14 @@
   {% block content %}
         {% for defect in defects %}
           <div class="defect">
-            <div class="date">
-              {{defect.published_date}}
-            </div>
             <h1><a href="{% url 'defect_detail' pk=defect.pk %}"> {{defect.title}} </a></h1>
             <p>{{defect.author}} </p>
             <p>{{defect.project}} </p>
             <p>{{defect.apartment}} </p>
             <p><a>{{defect.description}} </a></p>
+            <div class="date">
+              {{defect.published_date}}
+            </div>
           <div>
         {% endfor %}
 {% endblock %}

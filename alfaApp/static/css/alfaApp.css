@@ -3,7 +3,7 @@ h1, h2, h3, h4 {
 }
 
 .page-header {
-    background-color: #ff9400;
+    background-color: #333;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -17,7 +17,7 @@ h1, h2, h3, h4 {
 }
 
 .defect {
-    margin-bottom: 70px;
+  margin-bottom: 70px;
 }
 
 .defect p a {

@@ -1,29 +1,39 @@
 
 {% load staticfiles %}
 <html>
-    <div id="login">
-        <form class="form-horizontal" name="LoginForm" action="/login/" method="post">
+<head>
+    <title>Alfa stan defects</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form class="form-signin" name="LoginForm" action="/login/" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
         {% csrf_token %}
         {% if next %}
             <input type="hidden" name="next" value="{{ next }}" />
         {% endif %}
         <div class="control-group">
-            <label class="control-label" for="username">Username</label>
+            <label class="sr-only" for="username">Username</label>
             <div class="controls">
-                <input type="text" id="username" name="username"  placeholder="Username">
+                <input type="text" class="form-control" id="username" name="username"  placeholder="Username">
             </div>
         </div>
         <div class="control-group">
-            <label class="control-label" for="password">Password</label>
+            <label class="sr-only" for="password">Password</label>
             <div class="controls">
-                <input type="password" name="password" id="password" placeholder="Password">
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
             </div>
         </div>
         <div class="control-group">
             <div class="controls">
-                <button type="submit" class="btn">Login</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
             </div>
         </div>
         </form>
     </div>
+  </body>
 </html>

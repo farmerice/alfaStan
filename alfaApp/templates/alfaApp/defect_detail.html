@@ -1,15 +1,15 @@
 {% extends 'alfaApp/base.html' %}
 {% block content %}
     <div class="defect">
-      {% if post.published_date %}
-        <div class="date">
-          {{defect.published_date}}
-        </div>
-      {% endif %}
       <a class="btn btn-default" href="{% url 'defect_edit' pk=defect.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
       <p>{{defect.author}} </p>
       <p>{{defect.project}} </p>
       <p>{{defect.apartment}} </p>
       <p><a>{{defect.description}} </a></p>
+      {% if post.published_date %}
+        <div class="date">
+          {{defect.published_date}}
+        </div>
+      {% endif %}
     <div>
 {% endblock %}
